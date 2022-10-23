@@ -1,0 +1,60 @@
+.home-page-wrap {
+    .content-wrap {
+
+        //carosel
+        .carousel-wrap {
+            [nz-carousel-content] {
+                text-align: center;
+                height: 300px;
+                line-height: 595px;
+                overflow: hidden;
+
+                .img-carousel {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        //banner
+        .banner-wrap {
+            width: 90%;
+            margin: 20px auto;
+            .banner-list{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .banner-item{
+                    margin-right: 30px;
+                    width: 33.33%;
+                }
+                :last-child{
+                    margin: 0px;
+                }
+            }
+
+        }
+
+        //Product
+        .product-wrap{
+            .detail-product-wrap {
+                margin-bottom: 40px;
+                .list-item-product{
+                   display: flex;
+                   justify-content: center;
+                   .item-product {
+                    margin-right: 20px;
+                   }
+                   :last-child{
+                    margin: 0;
+                   }
+                }
+            }
+        }
+        
+
+    }
+}

@@ -1,0 +1,91 @@
+.detail-page-wrap {
+    .content {
+        .breadcumb-wrap{
+            padding: 15px 0px 20px 200px;
+        }
+        .details-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 30px;
+            .details-image-wrap {
+                width: 500px;
+                height: 500px;
+
+                [nz-carousel-content] {
+                    text-align: center;
+                    height: 160px;
+                    line-height: 160px;
+                    background: #364d79;
+                    color: #fff;
+                    overflow: hidden;
+                }
+
+                h3 {
+                    color: #fff;
+                    margin-bottom: 0;
+                    user-select: none;
+                }
+            }
+
+            .details-content-wrap {
+                padding-left: 30px;
+
+                .product-name {
+                    padding: 0 5px;
+                    border-bottom: 1px solid #3a3a3a;
+
+                    .name {
+                        color: #1D1D1F;
+                        font-size: 28px;
+                        font-weight: 700;
+                        padding-bottom: 12px;
+                    }
+
+                    .rate {
+                        padding: 5px 0;
+
+                        .total-rate {
+                            color: #0066CC;
+                            font-size: 13px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+
+                .cost-wrap {
+                    padding: 20px 0px 0px 5px;
+
+                    .number {
+                        color: #1D1D1F;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 44px;
+                    }
+
+                    .button-wrap {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .btn-primary {
+                            width: 50% !important;
+                            background-color: #0066CC;
+                            border-radius: 8px;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-transform: uppercase;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: 700;
+                            height: 52px;
+                        }
+
+                        .btn-primary-left {
+                            margin-left: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

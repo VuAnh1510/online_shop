@@ -1,0 +1,87 @@
+<div class="detail-page-wrap">
+
+    <!-- header -->
+
+    <div class="header">
+        <app-header></app-header>
+    </div>
+
+    <div class="content">
+        <div class="breadcumb-wrap">
+            <app-breadcumb></app-breadcumb>
+        </div>
+
+        <div class="details-wrap">
+
+            <div class="details-image-wrap">
+                <nz-carousel>
+                    <div nz-carousel-content *ngFor="let index of array">
+                        <h3>{{ index }}</h3>
+                    </div>
+                </nz-carousel>
+            </div>
+
+            <div class="details-content-wrap">
+                <div class="product-name">
+                    <div class="name">Iphone 14 Pro Max</div>
+                    <div class="rate">
+                        <nz-rate [ngModel]="2" nzDisabled></nz-rate>
+                        <span class="total-rate">1 lượt đánh giá</span>
+                    </div>
+                </div>
+
+                <div class="cost-wrap">
+                    <div class="number">31.000.000</div>
+                    <div class="button-wrap">
+                        <button nz-button nzType="primary" nzSize="large" class="btn-primary">
+                            <span nz-icon nzType="wallet" nzTheme="outline"></span>
+                            <span>Mua ngay</span>
+                        </button>
+                        <button nz-button nzType="primary" nzSize="large" class="btn-primary btn-primary-left">
+                            <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
+                            <span> Thêm vào giỏ hàng</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="promotion-imformation-wrap">
+                    <div class="promotion-imformation-header">
+                        <span nz-icon nzType="gift" nzTheme="outline"></span>
+                        <span>Khuyến mãi</span>
+                    </div>
+                    <div class="promotion-imformation-content">
+                        <p>
+                            <span>Các uu đãi</span>
+                            <span>1. Nhận gói 6 tháng Apple Music miễn phí</span>
+                            <span>2. Trả góp 0% qua thẻ tín dụng</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="product-extension">
+                    <div class="item-extension">
+                        <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                        <span>Bộ sản phẩm bao gồm: hộp</span>
+                    </div>
+                    <div class="item-extension">
+                        <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                        <span>Bảo hành 12 tháng</span>
+                    </div>
+                    <div class="item-extension">
+                        <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                        <span>Giao hàng toàn quốc</span>
+                    </div>
+                    <div class="item-extension">
+                        <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                        <span>Gọi để giao hàng 0123456789</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

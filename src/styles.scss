@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
+@import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
+
+body { 
+    background-color: #f5f5f7 !important; 
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+}

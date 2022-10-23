@@ -1,0 +1,70 @@
+<div class="home-page-wrap">
+
+    <!-- header -->
+
+    <div class="header">
+        <app-header></app-header>
+    </div>
+
+    <!-- content -->
+
+    <div class="content-wrap">
+
+        <!-- carousel-wrap -->
+
+        <div class="carousel-wrap">
+            <nz-carousel>
+                <div nz-carousel-content *ngFor="let index of arrayCarrosel">
+                    <picture class="img-carousel">
+                      <img src="assets/banner-MB-Marshall-1.png" alt="">
+                    </picture>
+                  </div>
+              </nz-carousel>
+        </div>
+
+        <!-- banner -->
+        
+        <div class="banner-wrap">
+            <div class="banner-list">
+                <app-banner *ngFor = "let item of arrayBaner" class = "banner-item"></app-banner>
+            </div>
+        </div>
+
+        <!-- product -->
+
+        <div class="product-wrap">
+
+            <!-- Iphone -->
+
+            <div class="detail-product-wrap">
+                <div class="list-item-product">
+                    <app-card *ngFor = "let item of arrayProduct" class="item-product"></app-card>
+                </div>
+            </div>
+
+            <div class="detail-product-wrap">
+                <div class="list-item-product">
+                    <app-card *ngFor = "let item of arrayProduct" class="item-product"></app-card>
+                </div>
+            </div>
+
+            <div class="detail-product-wrap">
+                <div class="list-item-product">
+                    <app-card *ngFor = "let item of arrayProduct" class="item-product"></app-card>
+                </div>
+            </div>
+
+            <div class="detail-product-wrap">
+                <div class="list-item-product">
+                    <app-card *ngFor = "let item of arrayProduct" class="item-product"></app-card>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <!-- footer -->
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>
