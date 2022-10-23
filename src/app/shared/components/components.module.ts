@@ -43,7 +43,9 @@ import { ButtonSelectMemoryComponent } from './button-select-memory/button-selec
     ButtonSeeAllComponent,
     BannerComponent,
     ButtonSeeAllComponent,
-    BreadcumbComponent
+    BreadcumbComponent,
+    ButtonSelectColorComponent,
+    ButtonSelectMemoryComponent
   ]
 })
 export class ComponentsModule { }

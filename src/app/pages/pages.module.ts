@@ -9,12 +9,13 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { SharedModule } from '../shared/shared.module';
-
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzRateModule } from 'ng-zorro-antd/rate';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { NzRateModule } from 'ng-zorro-antd/rate';
     SharedModule,
     NzCarouselModule,
     NzButtonModule,
-    NzRateModule
+    NzRateModule,
+    NzIconModule,
+    NzTabsModule
   ],
   exports : [
     HomePageComponent,

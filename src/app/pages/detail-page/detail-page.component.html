@@ -32,6 +32,30 @@
 
                 <div class="cost-wrap">
                     <div class="number">31.000.000</div>
+                    <div class="select-property-product">
+                        <div class="select-wrap">
+                            <div class="title">
+                                <span>Chọn dung lượng</span>
+                            </div>
+                            <div class="list">
+                                <app-button-select-memory class="item"></app-button-select-memory>
+                                <app-button-select-memory class="item"></app-button-select-memory>
+                                <app-button-select-memory class="item"></app-button-select-memory>
+                                <app-button-select-memory class="item"></app-button-select-memory>
+                            </div>
+                        </div>
+                        <div class="select-wrap">
+                            <div class="title">
+                                <span>Chọn màu sắc</span>
+                            </div>
+                            <div class="list">
+                                <app-button-select-color class="item"></app-button-select-color>
+                                <app-button-select-color class="item"></app-button-select-color>
+                                <app-button-select-color class="item"></app-button-select-color>
+                                <app-button-select-color class="item"></app-button-select-color>
+                            </div>
+                        </div>
+                    </div>
                     <div class="button-wrap">
                         <button nz-button nzType="primary" nzSize="large" class="btn-primary">
                             <span nz-icon nzType="wallet" nzTheme="outline"></span>
@@ -46,12 +70,12 @@
 
                 <div class="promotion-imformation-wrap">
                     <div class="promotion-imformation-header">
-                        <span nz-icon nzType="gift" nzTheme="outline"></span>
+                        <span nz-icon nzType="gift" class="icon-gift" nzTheme="outline"></span>
                         <span>Khuyến mãi</span>
                     </div>
                     <div class="promotion-imformation-content">
                         <p>
-                            <span>Các uu đãi</span>
+                            <span>Các ưu đãi</span>
                             <span>1. Nhận gói 6 tháng Apple Music miễn phí</span>
                             <span>2. Trả góp 0% qua thẻ tín dụng</span>
                         </p>
@@ -76,6 +100,35 @@
                         <span>Gọi để giao hàng 0123456789</span>
                     </div>
                 </div>
+
+            </div>
+        </div>
+
+        <!-- infomation wrap -->
+        <div class="infomation-wrap">
+            <div class="tab-wrap">
+                <nz-tabset>
+                    <nz-tab nzTitle="Mô tả">
+                        <h3>
+                            Mô tả sản phẩm
+                        </h3>
+                    </nz-tab>
+                    <nz-tab nzTitle="Thông số kỹ thuật">
+                        <h3>
+                            Thông số kỹ thuật
+                        </h3>
+                    </nz-tab>
+                    <nz-tab nzTitle="Chi tiết sản phẩm">
+                        <h3>
+                            Chi tiết sản phẩm
+                        </h3>
+                    </nz-tab>
+                    <nz-tab nzTitle="Đánh giá">
+                        <h3>
+                            Đánh giá
+                        </h3>
+                    </nz-tab>
+                </nz-tabset>
             </div>
         </div>
     </div>

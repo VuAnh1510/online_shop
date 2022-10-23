@@ -1,4 +1,4 @@
-.content-header{
+.content-header {
     .logo {
         width: 120px;
         height: 31px;
@@ -6,36 +6,34 @@
         margin: 16px 24px 16px 0;
         float: left;
     }
-    
+
     [nz-menu] {
         line-height: 64px;
         background: #515154;
         color: #ffff;
         font-size: 15px;
     }
-    
+
     nz-breadcrumb {
         margin: 16px 0;
     }
-    
-    
-    
+
     .inner-content {
         background: #fff;
         padding: 24px;
         min-height: 280px;
     }
-    
+
     .ant-layout-header {
         background: #515154;
         display: flex;
         justify-content: center;
     }
-    
+
     span.anticon.anticon-search {
         font-size: 20px;
     }
-    
+
     span.anticon.anticon-shopping-cart {
         font-size: 20px;
     }
