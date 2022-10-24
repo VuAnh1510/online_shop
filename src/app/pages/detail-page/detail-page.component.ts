@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-detail-page',
@@ -12,4 +13,6 @@ export class DetailPageComponent implements OnInit {
   ngOnInit(): void {
   }
   array = [1, 2, 3, 4];
+  form!: UntypedFormGroup;
+  value = '';
 }

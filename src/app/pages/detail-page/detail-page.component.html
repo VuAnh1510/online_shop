@@ -124,9 +124,49 @@
                         </h3>
                     </nz-tab>
                     <nz-tab nzTitle="Đánh giá">
-                        <h3>
-                            Đánh giá
-                        </h3>
+                        <div class = "rate-wrap">
+                            <div class="attention-title">
+                                <span>Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu *</span>
+                            </div>
+                            <div class="select-rate-wrap">
+                                <nz-rate [ngModel]="2.5" nzAllowHalf></nz-rate>
+                            </div>
+                            <div class="comment-wrap">
+                                <div class="comment">
+                                    <div class="title">
+                                        <span>Nhận xét của bạn*</span>
+                                    </div>
+                                    <div class="input-comment">
+                                        <form nz-form [formGroup]="form" nzLayout="vertical">
+                                            <nz-form-item>
+                                              <nz-form-control>
+                                                <nz-textarea-count [nzMaxCharacterCount]="100">
+                                                  <textarea rows="4" formControlName="comment" nz-input></textarea>
+                                                </nz-textarea-count>
+                                              </nz-form-control>
+                                            </nz-form-item>
+                                          </form>
+                                    </div>
+                                    
+                                </div>
+                                <div class="name">
+                                    <div class="title">
+                                        Tên*
+                                    </div>
+                                    <div class="input-name">
+                                        <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <div class="title">
+                                        Email*
+                                    </div>
+                                    <div class="input-email">
+                                        <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </nz-tab>
                 </nz-tabset>
             </div>
