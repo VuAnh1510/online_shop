@@ -15,6 +15,10 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { ButtonSelectColorComponent } from './button-select-color/button-select-color.component';
 import { ButtonSelectMemoryComponent } from './button-select-memory/button-select-memory.component';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { CardInCartComponent } from './card-in-cart/card-in-cart.component';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +30,8 @@ import { ButtonSelectMemoryComponent } from './button-select-memory/button-selec
     BannerComponent,
     BreadcumbComponent,
     ButtonSelectColorComponent,
-    ButtonSelectMemoryComponent
+    ButtonSelectMemoryComponent,
+    CardInCartComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +39,10 @@ import { ButtonSelectMemoryComponent } from './button-select-memory/button-selec
     NzMenuModule,
     NzIconModule,
     NzButtonModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzDrawerModule,
+    NzInputNumberModule,
+    FormsModule
   ],
   exports: [
     CardComponent,
@@ -45,7 +53,8 @@ import { ButtonSelectMemoryComponent } from './button-select-memory/button-selec
     ButtonSeeAllComponent,
     BreadcumbComponent,
     ButtonSelectColorComponent,
-    ButtonSelectMemoryComponent
+    ButtonSelectMemoryComponent,
+    CardInCartComponent
   ]
 })
 export class ComponentsModule { }

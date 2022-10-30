@@ -1,0 +1,40 @@
+.payment-page-wrap{
+    .content{
+        margin: 30px 12%;
+        .title-content{
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+        }
+        .information-payment-wrap{
+            display: flex;
+            .input-payment-wrap{
+                width: 50%;
+                background-color: #ffff;
+                border-radius: 8px;
+                margin-right: 16px;
+            }
+
+            .infomation-payment-product{
+                width: 50%;
+                height: 500px;
+                background-color: #ffff;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+[nz-form] {
+    max-width: 600px;
+  }
+
+  .phone-select {
+    width: 70px;
+  }
+
+  .register-are {
+    margin-bottom: 8px;
+  }

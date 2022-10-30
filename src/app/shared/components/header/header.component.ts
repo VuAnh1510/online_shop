@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  visible = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    console.log('close drawer');
+    this.visible = false;
   }
 
 }

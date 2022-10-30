@@ -1,0 +1,144 @@
+<div class="payment-page-wrap">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="content">
+        <div class="title-content">
+            <span>Thanh toán</span>
+        </div>
+        <div class="information-payment-wrap">
+            <div class="input-payment-wrap">
+                <div class="input-form">
+                    <form [formGroup]="inputPaymentForm" (ngSubmit)="onSubmit()" novalidate>
+                        <div class="title">
+                            <span>Thông tin nhận hàng</span>
+                        </div>
+                        <div class="personal-custommer-infomation">
+                            <div class="ratio-wrap">
+                                <nz-radio-group [(ngModel)]="sexValue" formControlName="sex">
+                                    <label nz-radio nzValue="male">Anh</label>
+                                    <label nz-radio nzValue="female">Chị</label>
+                                </nz-radio-group>
+                            </div>
+                            <div class="information-customer-wrap">
+                                <div class="name-and-phone-wrap">
+                                    <input nz-input placeholder="Họ và tên" [(ngModel)]="value"
+                                        formControlName="name" />
+                                    <input nz-input placeholder="Số điện thoại" [(ngModel)]="value"
+                                        formControlName="phone" />
+                                </div>
+                                <div class="email-wrap">
+                                    <input nz-input placeholder="Email" [(ngModel)]="value" formControlName="email" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <span>Chọn phương thức nhận hàng</span>
+                        </div>
+                        <div class="delivery-input-wrap">
+                            <div class="ratio-wrap">
+                                <nz-radio-group [(ngModel)]="deliveryMethod" [ngModelOptions]="{standalone: true}">
+                                    <label nz-radio [nzValue]="true">Nhận tại cửa hàng</label>
+                                    <label nz-radio [nzValue]="false">Giao tận nơi</label>
+                                </nz-radio-group>
+                            </div>
+                            <div class="infomation-delivery">
+                                <nz-form-item>
+                                    <nz-form-label>Khu vực</nz-form-label>
+                                    <nz-form-control nzErrorTip="Please input your username!">
+                                        <input nz-input formControlName="fieldA" placeholder="input placeholder"
+                                            formControlName="storeCityAddress" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <div class="receive-at-store" *ngIf="deliveryMethod">
+                                    <nz-form-item>
+                                        <nz-form-label>Cửa hàng</nz-form-label>
+                                        <nz-form-control nzErrorTip="Please input your username!">
+                                            <input nz-input formControlName="fieldA" placeholder="input placeholder"
+                                                formControlName="addressStore" />
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                    <nz-form-item>
+                                        <nz-form-label>Ghi chú</nz-form-label>
+                                        <nz-form-control>
+                                            <nz-textarea-count [nzMaxCharacterCount]="100">
+                                                <textarea rows="4" formControlName="comment" nz-input
+                                                    formControlName="note"></textarea>
+                                            </nz-textarea-count>
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                    <div class="checkbox">
+                                        <label nz-checkbox [(ngModel)]="checked" formControlName="checkTranfer"
+                                            ngDefaultControl>Chuyển dữ liệu qua máy mới(tùy
+                                            chọn)</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label nz-checkbox [(ngModel)]="checked" formControlName="checkExportBill"
+                                            ngDefaultControl>Xuất hóa đơn công ty(tùy chọn)</label>
+                                    </div>
+                                </div>
+                                <div class="delivery-at-home" *ngIf="!deliveryMethod">
+                                    <div class="address">
+                                        <div class="city-and-district">
+                                            <nz-form-item>
+                                                <nz-form-label>Thành phố / Tỉnh</nz-form-label>
+                                                <nz-form-control nzErrorTip="Hãy chọn Tỉnh hoặc thành phố của bạn!">
+                                                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a person"
+                                                        [(ngModel)]="selectedValue" formControlName="city">
+                                                        <nz-option nzLabel="Hà Nội" nzValue="Hà Nội"></nz-option>
+                                                        <nz-option nzLabel="Bắc Giang" nzValue="Bắc Giang"></nz-option>
+                                                        <nz-option nzLabel="Bắc Ninh" nzValue="Bắc Ninh"></nz-option>
+                                                    </nz-select>
+                                                </nz-form-control>
+                                            </nz-form-item>
+                                            <nz-form-item>
+                                                <nz-form-label>Quận / huyện</nz-form-label>
+                                                <nz-form-control nzErrorTip="Nhận quận / huyện!">
+                                                    <input nz-input formControlName="fieldA"
+                                                        placeholder="Nhập quận huyện ví dụ: Cầu Giấy,...."
+                                                        formControlName="district" />
+                                                </nz-form-control>
+                                            </nz-form-item>
+                                        </div>
+                                        <div class="home-address">
+                                            <nz-form-item>
+                                                <nz-form-label>Địa chỉ:</nz-form-label>
+                                                <nz-form-control nzErrorTip="Nhập địa chỉ cụ thể!">
+                                                    <input nz-input formControlName="fieldA" placeholder="Nhập địa chỉ."
+                                                        formControlName="address" />
+                                                </nz-form-control>
+                                            </nz-form-item>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label nz-checkbox [(ngModel)]="checked" formControlName="checkTranfer"
+                                            ngDefaultControl>Chuyển dữ liệu qua máy mới(tùy
+                                            chọn)</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label nz-checkbox [(ngModel)]="checked" formControlName="checkExportBill"
+                                            ngDefaultControl>Xuất hóa đơn công ty(tùy chọn)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="infomation-payment-product">
+                <div class="title-wrap">
+                    <span>Giỏ hàng</span>
+                </div>
+                <div class="list-product">
+                    <div class="item">
+                        <app-card-in-cart></app-card-in-cart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

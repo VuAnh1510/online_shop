@@ -16,13 +16,19 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     LoginPageComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    CartPageComponent,
+    PaymentPageComponent
   ],
   imports: [
     CommonModule,
@@ -38,12 +44,16 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
     NzButtonModule,
     NzRateModule,
     NzIconModule,
-    NzTabsModule
+    NzTabsModule,
+    NzRadioModule,
+    NzSelectModule,
+    NzCheckboxModule
   ],
   exports : [
     HomePageComponent,
     LoginPageComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    PaymentPageComponent
   ]
 })
 export class PagesModule { }
